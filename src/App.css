@@ -191,7 +191,7 @@
   display: flex;
   align-items: end;
   padding: clamp(2rem, 6vw, 6rem);
-  background: #08090c;
+  background: rgba(8, 9, 12, 0.92);
 }
 
 .tour-section::before {
