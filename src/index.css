@@ -1,10 +1,10 @@
-/* Design direction: City as Current — a dark cinematic foundation that gives the image sequence and editorial type the full viewport. */
+/* Design direction: City as Current — the initial supplied frame is the global fallback surface, eliminating all black page backgrounds. */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap');
 
 :root {
   font-family: 'Manrope', sans-serif;
   color: #f4f0e8;
-  background: #07080b;
+  background: transparent;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,8 +13,16 @@
 
 * { box-sizing: border-box; }
 
-html { background: #07080b; scroll-behavior: smooth; }
+html {
+  background: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663746021595/OLnpmocIekvMJSEh.png') center / cover fixed no-repeat;
+  scroll-behavior: smooth;
+}
 
-body { min-width: 320px; margin: 0; overflow-x: hidden; }
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  background: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663746021595/OLnpmocIekvMJSEh.png') center / cover fixed no-repeat;
+}
 
 button, a { font: inherit; }

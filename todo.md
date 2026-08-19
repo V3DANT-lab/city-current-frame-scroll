@@ -8,3 +8,6 @@
 - [x] Remove section color fills and soften the text opacity across the frame-scroll experience.
 - [x] Redeploy and verify the refined transparent high-resolution visual treatment on Netlify.
 - [x] Publish the source update, including the resilient high-resolution loader adjustment, to GitHub.
+- [x] Remove all remaining black background surfaces so the frame sequence fills the composition continuously.
+- [x] Redeploy the frame-only presentation and verify the live result.
+- [ ] Publish the frame-only source update to GitHub.

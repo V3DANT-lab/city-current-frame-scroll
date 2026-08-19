@@ -19,3 +19,7 @@ Live diagnostics confirm that the production page requests the restored original
 The original frame requests completed in the browser, but the visual loading indicator did not advance consistently. The loader now records already-cached image completions as well as normal load/error events so the high-resolution sequence initializes reliably across reloads.
 
 The first high-resolution upload completed successfully; a follow-up upload for the loader resilience adjustment received a Netlify 502 provider error. The site is therefore still serving the requested transparent high-resolution visual treatment, while the resilient loader adjustment awaits a successful retry.
+
+The frame-only local verification starts directly on frame 001 and advances to frame 008 at 10% scroll without any opening, closing, or black spacer section. The supplied imagery now provides the entire visible surface.
+
+The external full-resolution asset verification completed with the complete 75-frame sequence preloaded at 100%, preserving original frame quality while keeping the deployable application bundle small.

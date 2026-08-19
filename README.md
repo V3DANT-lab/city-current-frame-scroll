@@ -6,7 +6,7 @@ City / Current turns a supplied aerial city sequence into an immersive web exper
 
 | Experience element | Implementation |
 | --- | --- |
-| **Frame sequence** | Seventy-five original full-resolution PNG frames rendered into a full-viewport canvas sequence. |
+| **Frame sequence** | Seventy-five original full-resolution PNG frames loaded from a dedicated CDN manifest and rendered into a full-viewport canvas sequence. |
 | **Scroll synchronisation** | Page progress maps to the frame index through a smoothed `requestAnimationFrame` loop. |
 | **Text choreography** | Five editorial text stations fade and move in alternating left/right positions at defined sequence progress points. |
 | **Typography** | DM Serif Display for cinematic headline moments, Manrope for supporting copy, and IBM Plex Mono for sequence metadata. |
@@ -36,8 +36,8 @@ pnpm build
 | Path | Purpose |
 | --- | --- |
 | `src/App.tsx` | Canvas renderer, image preloading, smoothed scroll-frame mapping, and narrative text stations. |
+| `src/frameSources.ts` | Ordered CDN manifest for the original full-resolution frame sequence. |
 | `src/App.css` | The City as Current visual system, responsive composition, and frame-stage presentation. |
-| `public/frames/` | The 75 original full-resolution PNG frames used by the canvas renderer. |
 | `ideas.md` | The approved design direction and interaction philosophy. |
 | `frame-sequence-notes.md` | Frame analysis and browser verification notes. |
 
@@ -45,7 +45,7 @@ pnpm build
 
 The page uses a tall scroll track with a sticky viewport. Its current scroll position is transformed into a normalized value between 0 and 1, which selects the relevant animation frame. The displayed value follows the target through a short low-pass smoothing step, allowing the canvas and text stations to move cohesively in both scroll directions.
 
-The implementation preloads the sequence in the browser and caps canvas device-pixel density to balance visual fidelity with smoothness. If reduced motion is requested, nonessential transition effects are removed while the frame sequence remains controllable by scroll.
+The implementation preloads the original full-resolution sequence from its dedicated asset manifest and caps canvas device-pixel density to balance visual fidelity with smoothness. The application bundle contains no duplicate local frame directory, allowing the Netlify deployment to remain small while the sequence preserves its original visual quality. If reduced motion is requested, nonessential transition effects are removed while the frame sequence remains controllable by scroll.
 
 ## Author
 

@@ -1,12 +1,10 @@
 /* Design direction: City as Current — editorial cinematic titles, alternating text stations, and a restrained Signal Vermilion scroll index. */
 import { useEffect, useRef, useState } from 'react'
+import { FRAME_SOURCES } from './frameSources'
 import './App.css'
 
-const FRAME_COUNT = 75
-const frameSources = Array.from(
-  { length: FRAME_COUNT },
-  (_, index) => `/frames/ezgif-frame-${String(index + 1).padStart(3, '0')}.png`,
-)
+const FRAME_COUNT = FRAME_SOURCES.length
+const frameSources = FRAME_SOURCES
 
 const stations = [
   {
@@ -179,15 +177,6 @@ function App() {
 
   return (
     <main className="story-shell">
-      <section className="opening" aria-label="Frame scroll introduction">
-        <div className="opening__brand">
-          <span className="beacon" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span>FIELD / CITY CURRENT</span>
-        </div>
-        <p className="opening__eyebrow">Scroll to direct the sequence</p>
-        <div className="opening__rule" aria-hidden="true"></div>
-      </section>
-
       <section className="scroll-track" ref={scrollTrackRef} aria-label="City frame sequence">
         <div className="sticky-stage">
           <canvas ref={canvasRef} className="frame-canvas" aria-label="Cinematic city sequence animated by page scroll" />
@@ -237,12 +226,6 @@ function App() {
             <span>V.01 — 2026</span>
           </div>
         </div>
-      </section>
-
-      <section className="closing">
-        <p className="closing__label">END OF THE ASCENT</p>
-        <h2>KEEP THE HORIZON<br />IN <em>MOTION.</em></h2>
-        <p className="closing__copy">A frame-by-frame city study, directed by the movement of your hand.</p>
       </section>
     </main>
   )

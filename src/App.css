@@ -1,96 +1,22 @@
-/* Design direction: City as Current — cinematic city imagery sits behind editorial type; Signal Vermilion only marks movement and sequence metadata. */
+/* Design direction: City as Current — a frame-only sequence where the supplied imagery fills the complete scroll canvas and text remains deliberately light. */
 .story-shell {
   background: transparent;
   color: #f4f0e8;
 }
 
-.opening {
-  position: relative;
-  display: grid;
-  min-height: 100svh;
-  padding: clamp(1.4rem, 3vw, 3.2rem);
-  align-content: space-between;
-  background: url('/frames/ezgif-frame-001.png') center / cover no-repeat;
-  overflow: hidden;
-}
-
-.opening::before {
-  position: absolute;
-  content: '';
-  width: min(70vw, 58rem);
-  aspect-ratio: 1;
-  right: -15%;
-  top: -35%;
-  border: 1px solid rgba(244, 240, 232, 0.12);
-  border-radius: 50%;
-  box-shadow: 0 0 0 9rem rgba(255, 255, 255, 0.01), 0 0 0 18rem rgba(255, 255, 255, 0.008);
-}
-
-.opening__brand,
-.opening__eyebrow,
 .stage-header,
 .stage-footer,
 .progress-rail,
-.text-station__label,
-.closing__label {
+.text-station__label {
   font-family: 'IBM Plex Mono', monospace;
   letter-spacing: 0.16em;
   font-size: 0.62rem;
   font-weight: 500;
 }
 
-.opening__brand {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  gap: 0.78rem;
-  width: fit-content;
-}
-
-.beacon {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 2px;
-  width: 1.4rem;
-  height: 1.2rem;
-  padding-bottom: 1px;
-  border-bottom: 1px solid #ff4c3d;
-}
-
-.beacon i {
-  display: block;
-  width: 3px;
-  background: #ff4c3d;
-}
-
-.beacon i:nth-child(1) { height: 35%; }
-.beacon i:nth-child(2) { height: 68%; }
-.beacon i:nth-child(3) { height: 100%; }
-
-.opening__eyebrow {
-  position: relative;
-  z-index: 1;
-  margin: auto 0 clamp(2rem, 10vh, 7rem) clamp(10vw, 12vw, 15rem);
-  max-width: 12rem;
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(2.15rem, 4.1vw, 5rem);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.055em;
-  line-height: 0.92;
-}
-
-.opening__rule {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  border-top: 1px solid rgba(244, 240, 232, 0.2);
-}
-
 .scroll-track {
   position: relative;
-  height: 920vh;
+  height: 1000vh;
   background: transparent;
 }
 
@@ -259,40 +185,8 @@
 .loading-state b { color: #ff867c; font-weight: 500; }
 .loading-state--complete { opacity: 0; pointer-events: none; }
 
-.closing {
-  min-height: 85svh;
-  padding: clamp(5rem, 11vw, 11rem) clamp(1.4rem, 8vw, 10rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: url('/frames/ezgif-frame-075.png') center / cover no-repeat;
-  color: rgba(244, 240, 232, 0.62);
-}
-
-.closing__label { margin: 0 0 1.8rem; color: rgba(255, 134, 124, 0.52); }
-
-.closing h2 {
-  margin: 0;
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: clamp(3.7rem, 9vw, 10rem);
-  font-weight: 400;
-  letter-spacing: -0.075em;
-  line-height: 0.76;
-}
-
-.closing h2 em { color: rgba(255, 134, 124, 0.58); font-weight: 400; }
-
-.closing__copy {
-  max-width: 24rem;
-  margin: 2.4rem 0 0 min(25vw, 22rem);
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.94rem;
-  line-height: 1.55;
-}
-
 @media (max-width: 760px) {
-  .opening__eyebrow { margin-left: 20vw; }
-  .scroll-track { height: 810vh; }
+  .scroll-track { height: 900vh; }
   .stage-header__wordmark { display: none; }
   .progress-rail { height: 8rem; left: 1.25rem; }
   .text-station { top: 48%; width: calc(100% - 4.6rem); }
@@ -302,7 +196,6 @@
   .text-station__note { max-width: 11rem; margin-top: 1.2rem; font-size: 0.67rem; }
   .stage-footer { font-size: 0.5rem; }
   .loading-state { right: 1.25rem; }
-  .closing__copy { margin-left: 12vw; }
 }
 
 @media (prefers-reduced-motion: reduce) {
