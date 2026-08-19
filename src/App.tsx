@@ -5,7 +5,7 @@ import './App.css'
 const FRAME_COUNT = 75
 const frameSources = Array.from(
   { length: FRAME_COUNT },
-  (_, index) => `/frames/ezgif-frame-${String(index + 1).padStart(3, '0')}.png`,
+  (_, index) => `/frames/ezgif-frame-${String(index + 1).padStart(3, '0')}.webp`,
 )
 
 const stations = [

@@ -1,3 +1,6 @@
 - [x] Copy the 75 supplied frames into the project and implement a smoothed canvas frame renderer.
 - [x] Build the scrolling narrative, rich zig-zag typography, and responsive visual system.
 - [x] Test the experience, prepare the README with Vedu as author, and publish a separate GitHub repository.
+- [x] Change the City / Current GitHub repository visibility to public.
+- [x] Deploy the production frame-scroll build to Netlify and verify the public page URL.
+- [x] Add the verified Netlify page URL to the README and push the update to GitHub.

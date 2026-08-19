@@ -7,3 +7,5 @@ The scroll experience will map page progress to these 75 frames with a request-a
 Browser verification confirmed that the initial sticky sequence frame renders successfully behind the first left-aligned text station after the image-loading retry safeguard was added.
 
 At approximately 25% scroll progress, browser verification showed **frame 019 / 075** alongside the second, right-aligned “LIGHT FINDS A WAY FORWARD.” text station. This confirms the zig-zag station timing and smoothed frame mapping remain synchronized beyond the initial sequence state.
+
+The production Netlify verification confirmed that the homepage renders at the public URL and completes the optimized 75-frame preload successfully.
