@@ -7,4 +7,4 @@
 - [x] Restore the original full-resolution PNG frame sequence for uncompressed playback.
 - [x] Remove section color fills and soften the text opacity across the frame-scroll experience.
 - [x] Redeploy and verify the refined transparent high-resolution visual treatment on Netlify.
-- [ ] Publish the source update, including the resilient high-resolution loader adjustment, to GitHub.
+- [x] Publish the source update, including the resilient high-resolution loader adjustment, to GitHub.
