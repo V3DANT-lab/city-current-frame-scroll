@@ -11,3 +11,6 @@
 - [x] Remove all remaining black background surfaces so the frame sequence fills the composition continuously.
 - [x] Redeploy the frame-only presentation and verify the live result.
 - [x] Publish the frame-only source update to GitHub.
+- [x] Add a final Book a Tour to Guangzhou, China section with 70% opacity.
+- [x] Increase the frame-scroll pacing while preserving smooth synchronized rendering.
+- [ ] Redeploy the updated experience, verify it, and publish the source update.

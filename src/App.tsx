@@ -148,7 +148,7 @@ function App() {
 
     const render = () => {
       const delta = targetProgressRef.current - smoothProgressRef.current
-      smoothProgressRef.current += delta * 0.085
+      smoothProgressRef.current += delta * 0.16
 
       if (Math.abs(delta) < 0.0002) smoothProgressRef.current = targetProgressRef.current
 
@@ -225,6 +225,15 @@ function App() {
             <span>GUANGZHOU / NIGHT FLIGHT</span>
             <span>V.01 — 2026</span>
           </div>
+        </div>
+      </section>
+
+      <section className="tour-section" aria-labelledby="tour-title">
+        <div className="tour-section__content">
+          <p className="tour-section__eyebrow">CITY / CURRENT — LAST FRAME</p>
+          <h2 id="tour-title">BOOK A TOUR<br />TO <em>GUANGZHOU, CHINA.</em></h2>
+          <p className="tour-section__copy">Step beyond the sequence and meet the city at street level—where every signal, skyline, and river crossing becomes part of the route.</p>
+          <a className="tour-section__link" href="mailto:hello@example.com?subject=Book%20a%20Tour%20to%20Guangzhou">PLAN YOUR VISIT <span aria-hidden="true">↗</span></a>
         </div>
       </section>
     </main>

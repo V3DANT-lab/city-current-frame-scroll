@@ -23,3 +23,5 @@ The first high-resolution upload completed successfully; a follow-up upload for 
 The frame-only local verification starts directly on frame 001 and advances to frame 008 at 10% scroll without any opening, closing, or black spacer section. The supplied imagery now provides the entire visible surface.
 
 The external full-resolution asset verification completed with the complete 75-frame sequence preloaded at 100%, preserving original frame quality while keeping the deployable application bundle small.
+
+The tour-section verification confirmed the final **Book a Tour to Guangzhou, China** content is present after the accelerated frame sequence, and its content container applies the requested 70% opacity.

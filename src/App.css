@@ -16,7 +16,7 @@
 
 .scroll-track {
   position: relative;
-  height: 1000vh;
+  height: 680vh;
   background: transparent;
 }
 
@@ -185,8 +185,78 @@
 .loading-state b { color: #ff867c; font-weight: 500; }
 .loading-state--complete { opacity: 0; pointer-events: none; }
 
+.tour-section {
+  position: relative;
+  min-height: 88svh;
+  display: flex;
+  align-items: end;
+  padding: clamp(2rem, 6vw, 6rem);
+  background: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663746021595/yfAbibCmKpXksYsE.png') center / cover no-repeat;
+}
+
+.tour-section::before {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: linear-gradient(90deg, rgba(4, 7, 11, 0.15), rgba(4, 7, 11, 0.03) 72%);
+}
+
+.tour-section__content {
+  position: relative;
+  z-index: 1;
+  max-width: min(72rem, 92vw);
+  opacity: 0.7;
+}
+
+.tour-section__eyebrow {
+  margin: 0 0 1.4rem;
+  color: rgba(244, 240, 232, 0.82);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+}
+
+.tour-section h2 {
+  margin: 0;
+  color: #f8f5ee;
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(3.7rem, 9vw, 10rem);
+  font-weight: 400;
+  letter-spacing: -0.075em;
+  line-height: 0.76;
+}
+
+.tour-section h2 em { color: #ff867c; font-weight: 400; }
+
+.tour-section__copy {
+  max-width: 27rem;
+  margin: 2.3rem 0 0 min(20vw, 18rem);
+  color: rgba(244, 240, 232, 0.9);
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.tour-section__link {
+  display: inline-flex;
+  gap: 1.5rem;
+  margin: 2.2rem 0 0 min(20vw, 18rem);
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgba(244, 240, 232, 0.72);
+  color: #f8f5ee;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  transition: opacity 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.tour-section__link:hover { opacity: 0.66; transform: translateX(0.35rem); }
+
 @media (max-width: 760px) {
-  .scroll-track { height: 900vh; }
+  .scroll-track { height: 600vh; }
   .stage-header__wordmark { display: none; }
   .progress-rail { height: 8rem; left: 1.25rem; }
   .text-station { top: 48%; width: calc(100% - 4.6rem); }
@@ -196,6 +266,9 @@
   .text-station__note { max-width: 11rem; margin-top: 1.2rem; font-size: 0.67rem; }
   .stage-footer { font-size: 0.5rem; }
   .loading-state { right: 1.25rem; }
+  .tour-section { min-height: 72svh; padding: 1.5rem; }
+  .tour-section__copy,
+  .tour-section__link { margin-left: 12vw; }
 }
 
 @media (prefers-reduced-motion: reduce) {
