@@ -1,0 +1,3 @@
+- [x] Copy the 75 supplied frames into the project and implement a smoothed canvas frame renderer.
+- [x] Build the scrolling narrative, rich zig-zag typography, and responsive visual system.
+- [ ] Test the experience, prepare the README with Vedu as author, and publish a separate GitHub repository.

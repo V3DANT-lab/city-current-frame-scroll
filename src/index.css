@@ -1,0 +1,20 @@
+/* Design direction: City as Current — a dark cinematic foundation that gives the image sequence and editorial type the full viewport. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap');
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #f4f0e8;
+  background: #07080b;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+html { background: #07080b; scroll-behavior: smooth; }
+
+body { min-width: 320px; margin: 0; overflow-x: hidden; }
+
+button, a { font: inherit; }
