@@ -6,7 +6,7 @@ City / Current turns a supplied aerial city sequence into an immersive web exper
 
 | Experience element | Implementation |
 | --- | --- |
-| **Frame sequence** | Seventy-five supplied frames, optimized as WebP assets for a lightweight full-viewport canvas sequence. |
+| **Frame sequence** | Seventy-five original full-resolution PNG frames rendered into a full-viewport canvas sequence. |
 | **Scroll synchronisation** | Page progress maps to the frame index through a smoothed `requestAnimationFrame` loop. |
 | **Text choreography** | Five editorial text stations fade and move in alternating left/right positions at defined sequence progress points. |
 | **Typography** | DM Serif Display for cinematic headline moments, Manrope for supporting copy, and IBM Plex Mono for sequence metadata. |
@@ -37,7 +37,7 @@ pnpm build
 | --- | --- |
 | `src/App.tsx` | Canvas renderer, image preloading, smoothed scroll-frame mapping, and narrative text stations. |
 | `src/App.css` | The City as Current visual system, responsive composition, and frame-stage presentation. |
-| `public/frames/` | The 75-frame WebP sequence used by the canvas renderer. |
+| `public/frames/` | The 75 original full-resolution PNG frames used by the canvas renderer. |
 | `ideas.md` | The approved design direction and interaction philosophy. |
 | `frame-sequence-notes.md` | Frame analysis and browser verification notes. |
 

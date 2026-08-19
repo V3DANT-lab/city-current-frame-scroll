@@ -5,7 +5,7 @@ import './App.css'
 const FRAME_COUNT = 75
 const frameSources = Array.from(
   { length: FRAME_COUNT },
-  (_, index) => `/frames/ezgif-frame-${String(index + 1).padStart(3, '0')}.webp`,
+  (_, index) => `/frames/ezgif-frame-${String(index + 1).padStart(3, '0')}.png`,
 )
 
 const stations = [
@@ -62,14 +62,27 @@ function App() {
     let mounted = true
     let loaded = 0
 
+    const registerLoadedFrame = () => {
+      loaded += 1
+      if (mounted) setLoadedFrames(loaded)
+    }
+
     imagesRef.current = frameSources.map((source) => {
       const image = new Image()
       image.decoding = 'async'
-      image.onload = () => {
-        loaded += 1
-        if (mounted) setLoadedFrames(loaded)
+      let recorded = false
+
+      const markLoaded = () => {
+        if (recorded) return
+        recorded = true
+        registerLoadedFrame()
       }
+
+      image.onload = markLoaded
+      image.onerror = markLoaded
       image.src = source
+
+      if (image.complete) queueMicrotask(markLoaded)
       return image
     })
 

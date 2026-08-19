@@ -4,3 +4,7 @@
 - [x] Change the City / Current GitHub repository visibility to public.
 - [x] Deploy the production frame-scroll build to Netlify and verify the public page URL.
 - [x] Add the verified Netlify page URL to the README and push the update to GitHub.
+- [x] Restore the original full-resolution PNG frame sequence for uncompressed playback.
+- [x] Remove section color fills and soften the text opacity across the frame-scroll experience.
+- [x] Redeploy and verify the refined transparent high-resolution visual treatment on Netlify.
+- [ ] Publish the source update, including the resilient high-resolution loader adjustment, to GitHub.
