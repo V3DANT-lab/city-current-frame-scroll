@@ -1,4 +1,4 @@
-# City / Current
+# GUANGZHOU TOUR
 
 > **A scroll-directed, frame-by-frame city narrative built in React.**
 
@@ -14,7 +14,9 @@ City / Current turns a supplied aerial city sequence into an immersive web exper
 
 ## Live site
 
-The published frame-scroll experience is available at **[city-current-frame-scroll.netlify.app](https://city-current-frame-scroll.netlify.app)**.
+The published frame-scroll experience is available at **[guangzhou-tour.netlify.app](https://guangzhou-tour.netlify.app)**.
+
+The public source repository is **[V3DANT-lab/GUANGZHOU-TOUR](https://github.com/V3DANT-lab/GUANGZHOU-TOUR)**.
 
 ## Local development
 

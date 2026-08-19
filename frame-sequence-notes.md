@@ -29,3 +29,7 @@ The tour-section verification confirmed the final **Book a Tour to Guangzhou, Ch
 The motion refinement retains a smooth final frame progression with subtle text offset, while the tour finale is now corrected to use only a soft black surface rather than the final city frame.
 
 Live Netlify verification after the refinement confirms that the tour section reports `background-image: none`, `background-color: rgba(8, 9, 12, 0.92)`, and the revised label `CITY / CURRENT — TOUR`. The first text station exposes a non-identity transform while scrolling, confirming the parallax offset is active.
+
+The Netlify settings page did not render its interactive controls in the browser session during the requested site rename, so the configured hosting integration is used for the site-name update.
+
+The renamed public endpoints have been verified: `https://guangzhou-tour.netlify.app` serves the production experience, and `https://github.com/V3DANT-lab/GUANGZHOU-TOUR` resolves as a public repository.

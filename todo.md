@@ -17,3 +17,6 @@
 - [x] Smooth the frame interpolation and add restrained text parallax.
 - [x] Remove the final-frame tour background and use a subtle black surface instead.
 - [x] Redeploy the motion refinement, verify it, and publish the source update.
+- [x] Rename the public GitHub repository to GUANGZHOU-TOUR.
+- [x] Rename the Netlify site and default public link to GUANGZHOU-TOUR.
+- [x] Update the README with the replacement links, verify them, and publish the documentation update.
