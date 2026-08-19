@@ -13,4 +13,4 @@
 - [x] Publish the frame-only source update to GitHub.
 - [x] Add a final Book a Tour to Guangzhou, China section with 70% opacity.
 - [x] Increase the frame-scroll pacing while preserving smooth synchronized rendering.
-- [ ] Redeploy the updated experience, verify it, and publish the source update.
+- [x] Redeploy the updated experience, verify it, and publish the source update.
