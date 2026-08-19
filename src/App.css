@@ -191,14 +191,14 @@
   display: flex;
   align-items: end;
   padding: clamp(2rem, 6vw, 6rem);
-  background: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663746021595/yfAbibCmKpXksYsE.png') center / cover no-repeat;
+  background: #08090c;
 }
 
 .tour-section::before {
   position: absolute;
   inset: 0;
   content: '';
-  background: linear-gradient(90deg, rgba(4, 7, 11, 0.15), rgba(4, 7, 11, 0.03) 72%);
+  background: rgba(255, 255, 255, 0.012);
 }
 
 .tour-section__content {

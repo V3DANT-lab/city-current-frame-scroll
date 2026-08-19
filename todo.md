@@ -14,3 +14,6 @@
 - [x] Add a final Book a Tour to Guangzhou, China section with 70% opacity.
 - [x] Increase the frame-scroll pacing while preserving smooth synchronized rendering.
 - [x] Redeploy the updated experience, verify it, and publish the source update.
+- [x] Smooth the frame interpolation and add restrained text parallax.
+- [x] Remove the final-frame tour background and use a subtle black surface instead.
+- [x] Redeploy the motion refinement, verify it, and publish the source update.

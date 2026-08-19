@@ -148,9 +148,10 @@ function App() {
 
     const render = () => {
       const delta = targetProgressRef.current - smoothProgressRef.current
-      smoothProgressRef.current += delta * 0.16
+      const interpolation = 0.1 + Math.min(Math.abs(delta) * 0.16, 0.06)
+      smoothProgressRef.current += delta * interpolation
 
-      if (Math.abs(delta) < 0.0002) smoothProgressRef.current = targetProgressRef.current
+      if (Math.abs(delta) < 0.00012) smoothProgressRef.current = targetProgressRef.current
 
       const currentProgress = smoothProgressRef.current
       const frameIndex = Math.round(currentProgress * (FRAME_COUNT - 1))
@@ -198,6 +199,9 @@ function App() {
             const distance = Math.abs(progress - station.at)
             const visibility = clamp(1 - distance / 0.16)
             const offset = (1 - visibility) * 26
+            const parallaxY = clamp(progress - station.at, -0.18, 0.18) * -64
+            const parallaxX = clamp(progress - station.at, -0.18, 0.18) * (station.side === 'left' ? 18 : -18)
+            const entranceX = station.side === 'left' ? -offset : offset
 
             return (
               <article
@@ -205,7 +209,7 @@ function App() {
                 className={`text-station text-station--${station.side}`}
                 style={{
                   opacity: visibility,
-                  transform: `translate3d(${station.side === 'left' ? -offset : offset}px, ${offset}px, 0)`,
+                  transform: `translate3d(${entranceX + parallaxX}px, ${offset + parallaxY}px, 0)`,
                   pointerEvents: visibility > 0.6 ? 'auto' : 'none',
                 }}
               >
@@ -230,7 +234,7 @@ function App() {
 
       <section className="tour-section" aria-labelledby="tour-title">
         <div className="tour-section__content">
-          <p className="tour-section__eyebrow">CITY / CURRENT — LAST FRAME</p>
+          <p className="tour-section__eyebrow">CITY / CURRENT — TOUR</p>
           <h2 id="tour-title">BOOK A TOUR<br />TO <em>GUANGZHOU, CHINA.</em></h2>
           <p className="tour-section__copy">Step beyond the sequence and meet the city at street level—where every signal, skyline, and river crossing becomes part of the route.</p>
           <a className="tour-section__link" href="mailto:hello@example.com?subject=Book%20a%20Tour%20to%20Guangzhou">PLAN YOUR VISIT <span aria-hidden="true">↗</span></a>
